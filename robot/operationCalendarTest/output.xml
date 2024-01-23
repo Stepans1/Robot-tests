@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-23T00:14:50.944449" rpa="false" schemaversion="5">
+<suite id="s1" name="operationCalendarDeepTest" source="C:\robot\operationCalendarTest\operationCalendarDeepTest.robot">
+<test id="s1-t1" name="Operation calendar test" line="65">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:14:51.690479" level="INFO">Opening browser 'Chrome' to base url 'https://test-orto-opr.azurewebsites.net/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-23T00:14:51.690479" elapsed="7.006969"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:01.711703" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:14:58.705451" elapsed="3.006252"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-23T00:15:01.711703" elapsed="0.135969"/>
+</kw>
+<kw name="Get Current Date In Latvia" owner="date">
+<msg time="2024-01-23T00:15:01.847672" level="INFO">${current_date} = January 2024</msg>
+<var>${current_date}</var>
+<status status="PASS" start="2024-01-23T00:15:01.847672" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:04.851897" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:01.847672" elapsed="3.004225"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:04.851897" level="INFO">Typing text 'stepans.osipovs' into text field 'xpath://input[@class='v-field__input']'.</msg>
+<arg>${login_locator}</arg>
+<arg>${login_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:04.851897" elapsed="0.445554"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:05.297451" level="INFO">Typing text '2wBt(Sm6Hg' into text field 'xpath://input[@placeholder='Ievadiet paroli']'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:05.297451" elapsed="0.296004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:07.601933" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:05.601454" elapsed="2.000479"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:07.601933" level="INFO">Clicking element 'class:v-btn--block'.</msg>
+<arg>${button_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:07.601933" elapsed="0.128029"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:09.736594" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:07.729962" elapsed="2.006632"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:09.744559" level="INFO">Current location is 'https://test-orto-opr.azurewebsites.net/#/home'.</msg>
+<arg>${successful_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-01-23T00:15:09.736594" elapsed="0.007965"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:09.776558" level="INFO">Current page contains element 'id:app'.</msg>
+<arg>${successful_div}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-23T00:15:09.744559" elapsed="0.031999"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:09.800556" level="INFO">Current page contains element 'xpath://button[@value='basic_calendar']'.</msg>
+<arg>${operation_button}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-23T00:15:09.776558" elapsed="0.023998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:09.800556" level="INFO">Clicking element 'xpath://button[@value='basic_calendar']'.</msg>
+<arg>${operation_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:09.800556" elapsed="1.007089"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:13.809999" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:10.808752" elapsed="3.001247"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:13.858023" level="INFO">${actual_text} = OPERĀCIJU KALENDĀRS</msg>
+<var>${actual_text}</var>
+<arg>${operation_span}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:13.809999" elapsed="0.048024"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_text}</arg>
+<arg>${expected_text_operations}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-01-23T00:15:13.858023" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:13.906032" level="INFO">Element 'xpath://div[@role='tablist']' contains text 'OPERĀCIJU KALENDĀRS'.</msg>
+<arg>${navigation_line}</arg>
+<arg>${actual_text}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-01-23T00:15:13.858023" elapsed="0.048009"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:13.938024" level="INFO">Current page contains element 'xpath://div[@class='b-vbox b-box-center b-auto-container-panel b-panel-body-wrap b-sidebar-body-wrap']'.</msg>
+<arg>${small_calendar}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-23T00:15:13.906032" elapsed="0.031992"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:13.970048" level="INFO">Current page contains element 'xpath://div[@class='b-widget b-container b-datepicker-title b-content-element b-auto-container b-box-item b-flex-row']'.</msg>
+<arg>${month}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-23T00:15:13.946032" elapsed="0.024016"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:14.010040" level="INFO">${actual_text} = janvāris
+2024</msg>
+<var>${actual_text}</var>
+<arg>${month}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:13.970048" elapsed="0.039992"/>
+</kw>
+<kw name="Translate To English" owner="date">
+<msg time="2024-01-23T00:15:15.133375" level="INFO">${translated_text} = January 2024</msg>
+<var>${translated_text}</var>
+<arg>${actual_text}</arg>
+<status status="PASS" start="2024-01-23T00:15:14.010040" elapsed="1.123335"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${translated_text}</arg>
+<arg>${current_date}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-01-23T00:15:15.133375" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:18.139317" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:15.133375" elapsed="3.005942"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:18.175158" level="INFO">${dedicatedDayInCalendar} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f9759038b417c0c2689f2d0e89580dc4", element="917D3C7BE4CC8AA15A217D75D116A3CC_element_71")&gt;</msg>
+<var>${dedicatedDayInCalendar}</var>
+<arg>xpath://div[contains(@class, 'b-active-date')]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:18.139317" elapsed="0.035841"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:18.193010" level="INFO">${curentDateFromCalendar} = 23</msg>
+<var>${curentDateFromCalendar}</var>
+<arg>${dedicatedDayInCalendar}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:18.177344" elapsed="0.015666"/>
+</kw>
+<kw name="Get Current Day" owner="date">
+<msg time="2024-01-23T00:15:18.193010" level="INFO">${day_curent} = 23</msg>
+<var>${day_curent}</var>
+<status status="PASS" start="2024-01-23T00:15:18.193010" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${curentDateFromCalendar}</arg>
+<arg>${day_curent}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-01-23T00:15:18.193010" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:18.225044" level="INFO">Current page contains element 'xpath://div[@componentkey='basic_calendar']'.</msg>
+<arg>${mainDayView}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-23T00:15:18.193010" elapsed="0.032034"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:18.257043" level="INFO">${operationRoom_N1} = 1</msg>
+<var>${operationRoom_N1}</var>
+<arg>xpath://div[text()='Operāciju zāle I']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:18.225044" elapsed="0.031999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:18.257043" level="INFO">Clicking element 'xpath://li[@data-index='1']'.</msg>
+<arg>${orto_checkbox1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:18.257043" elapsed="0.225681"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:20.483341" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:18.482724" elapsed="2.000617"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:20.510771" level="INFO">${operationRoom_N1} = 0</msg>
+<var>${operationRoom_N1}</var>
+<arg>xpath://div[text()='Operāciju zāle I']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:20.484444" elapsed="0.026327"/>
+</kw>
+<if>
+<branch type="IF" condition="${operationRoom_N1}&gt;0">
+<kw name="Fail" owner="BuiltIn">
+<arg>Operāciju zāle I is still visible</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-01-23T00:15:20.510771" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-23T00:15:20.510771" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-01-23T00:15:20.510771" elapsed="0.000000"/>
+</if>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:20.542750" level="INFO">${operationRoom_N2} = 1</msg>
+<var>${operationRoom_N2}</var>
+<arg>xpath://div[text()='Operāciju zāle II']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:20.510771" elapsed="0.031979"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:20.542750" level="INFO">Clicking element 'xpath://li[@data-index='2']'.</msg>
+<arg>${orto_checkbox2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:20.542750" elapsed="0.256020"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:22.799108" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:20.798770" elapsed="2.000338"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:22.815138" level="INFO">${operationRoom_N2} = 0</msg>
+<var>${operationRoom_N2}</var>
+<arg>xpath://div[text()='Operāciju zāle II']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:22.799108" elapsed="0.016030"/>
+</kw>
+<if>
+<branch type="IF" condition="${operationRoom_N2}&gt;0">
+<kw name="Fail" owner="BuiltIn">
+<arg>Operāciju zāle II is still visible</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-01-23T00:15:22.815138" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-23T00:15:22.815138" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-01-23T00:15:22.815138" elapsed="0.000000"/>
+</if>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:22.839137" level="INFO">${operationRoom_N3} = 1</msg>
+<var>${operationRoom_N3}</var>
+<arg>xpath://div[text()='Operāciju zāle III']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:22.815138" elapsed="0.023999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:22.839137" level="INFO">Clicking element 'xpath://li[@data-index='3']'.</msg>
+<arg>${orto_checkbox3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:22.839137" elapsed="0.184023"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:25.023316" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:23.023160" elapsed="2.000156"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:25.039606" level="INFO">${operationRoom_N3} = 0</msg>
+<var>${operationRoom_N3}</var>
+<arg>xpath://div[text()='Operāciju zāle III']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:25.023316" elapsed="0.016290"/>
+</kw>
+<if>
+<branch type="IF" condition="${operationRoom_N3}&gt;0">
+<kw name="Fail" owner="BuiltIn">
+<arg>Operāciju zāle III is still visible</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-01-23T00:15:25.039606" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-23T00:15:25.039606" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-01-23T00:15:25.039606" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:25.039606" level="INFO">Clicking element 'xpath://li[@data-index='1']'.</msg>
+<arg>${orto_checkbox1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:25.039606" elapsed="0.183740"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:27.223645" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:25.223346" elapsed="2.000299"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:27.247978" level="INFO">${operationRoom_N1} = 1</msg>
+<var>${operationRoom_N1}</var>
+<arg>xpath://div[text()='Operāciju zāle I']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:27.223645" elapsed="0.024333"/>
+</kw>
+<if>
+<branch type="IF" condition="${operationRoom_N1}==0">
+<kw name="Fail" owner="BuiltIn">
+<arg>Operāciju zāle I is not visible</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-01-23T00:15:27.247978" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-23T00:15:27.247978" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-01-23T00:15:27.247978" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:27.247978" level="INFO">Clicking element 'xpath://li[@data-index='2']'.</msg>
+<arg>${orto_checkbox2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:27.247978" elapsed="0.207738"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:29.460679" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:27.455716" elapsed="2.004963"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:29.473951" level="INFO">${operationRoom_N2} = 1</msg>
+<var>${operationRoom_N2}</var>
+<arg>xpath://div[text()='Operāciju zāle II']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:29.460679" elapsed="0.013272"/>
+</kw>
+<if>
+<branch type="IF" condition="${operationRoom_N2}==0">
+<kw name="Fail" owner="BuiltIn">
+<arg>Operāciju zāle II is not visible</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-01-23T00:15:29.481948" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-23T00:15:29.481948" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-01-23T00:15:29.481948" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:29.481948" level="INFO">Clicking element 'xpath://li[@data-index='3']'.</msg>
+<arg>${orto_checkbox3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:29.481948" elapsed="0.203307"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:31.690929" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:29.686344" elapsed="2.004585"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:31.706677" level="INFO">${operationRoom_N3} = 1</msg>
+<var>${operationRoom_N3}</var>
+<arg>xpath://div[text()='Operāciju zāle III']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:31.690929" elapsed="0.015748"/>
+</kw>
+<if>
+<branch type="IF" condition="${operationRoom_N3}==0">
+<kw name="Fail" owner="BuiltIn">
+<arg>Operāciju zāle II is not visible</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-01-23T00:15:31.706677" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-01-23T00:15:31.706677" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-01-23T00:15:31.706677" elapsed="0.000000"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T00:15:31.714693" level="INFO">Clicking element 'xpath://i[@role='button']'.</msg>
+<arg>${close_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T00:15:31.714693" elapsed="0.187681"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T00:15:34.915094" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T00:15:31.910378" elapsed="3.004716"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-23T00:15:34.915094" elapsed="2.631694"/>
+</kw>
+<status status="PASS" start="2024-01-23T00:14:51.690479" elapsed="45.856309"/>
+</test>
+<status status="PASS" start="2024-01-23T00:14:50.944449" elapsed="46.602339"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="operationCalendarDeepTest">operationCalendarDeepTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

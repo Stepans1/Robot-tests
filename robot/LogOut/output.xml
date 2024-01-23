@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-19T13:05:40.112407" rpa="false" schemaversion="5">
+<suite id="s1" name="logoutTest" source="C:\robot\LogOut\logoutTest.robot">
+<test id="s1-t1" name="Enter Data and Check Console" line="21">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:40.303417" level="INFO">Opening browser 'Chrome' to base url 'https://test-orto-opr.azurewebsites.net/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-19T13:05:40.303417" elapsed="4.197908"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:05:47.502900" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:05:44.502326" elapsed="3.000574"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-19T13:05:47.503899" elapsed="0.127581"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:05:50.632975" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:05:47.632498" elapsed="3.000477"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:50.633997" level="INFO">Typing text 'stepans.osipovs' into text field 'xpath://input[@class='v-field__input']'.</msg>
+<arg>${login_locator}</arg>
+<arg>${login_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T13:05:50.633997" elapsed="0.193484"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:50.828481" level="INFO">Typing text '2wBt(Sm6Hg' into text field 'xpath://input[@placeholder='Ievadiet paroli']'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T13:05:50.828481" elapsed="0.139058"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:05:52.968015" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:05:50.967539" elapsed="2.000476"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:52.970060" level="INFO">Clicking element 'class:v-btn--block'.</msg>
+<arg>${button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T13:05:52.969050" elapsed="0.068233"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:05:55.038711" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:05:53.038288" elapsed="2.000423"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:55.045648" level="INFO">Current location is 'https://test-orto-opr.azurewebsites.net/#/home'.</msg>
+<arg>${successful_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-01-19T13:05:55.039833" elapsed="0.005815"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:55.059658" level="INFO">Current page contains element 'id:app'.</msg>
+<arg>${successful_div}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-19T13:05:55.046658" elapsed="0.013000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:55.060674" level="INFO">Clicking element 'xpath://i[@class='mdi-logout-variant mdi v-icon notranslate v-theme--customLightTheme v-icon--size-default']'.</msg>
+<arg>${logout_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T13:05:55.059658" elapsed="0.067299"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:05:57.129323" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:05:55.128963" elapsed="2.000360"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:57.143544" level="INFO">Current page contains element 'xpath://div[@class='v-card-actions d-flex justify-end']'.</msg>
+<arg>${modal}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-19T13:05:57.130111" elapsed="0.013433"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:57.143544" level="INFO">Clicking element 'xpath://button[@class='v-btn v-btn--slim v-theme--customLightTheme text-green-darken-1 v-btn--density-default v-btn--size-default v-btn--variant-text']'.</msg>
+<arg>${cancel-logout_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T13:05:57.143544" elapsed="0.057643"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:57.210564" level="INFO">Current page contains element 'id:app'.</msg>
+<arg>${successful_div}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-19T13:05:57.202189" elapsed="0.008375"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:05:59.212169" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:05:57.211558" elapsed="2.000611"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:59.213181" level="INFO">Clicking element 'xpath://i[@class='mdi-logout-variant mdi v-icon notranslate v-theme--customLightTheme v-icon--size-default']'.</msg>
+<arg>${logout_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T13:05:59.213181" elapsed="0.057477"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:05:59.278668" level="INFO">Current page contains element 'xpath://div[@class='v-card-actions d-flex justify-end']'.</msg>
+<arg>${modal}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-19T13:05:59.271656" elapsed="0.007012"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:06:01.280055" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:05:59.279657" elapsed="2.000398"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:06:01.281033" level="INFO">Clicking element 'xpath://button[@class='v-btn v-btn--slim v-theme--customLightTheme text-danger v-btn--density-default v-btn--size-default v-btn--variant-text']'.</msg>
+<arg>${confirm-logout_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-19T13:06:01.281033" elapsed="0.042000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:06:03.323848" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:06:01.323033" elapsed="2.000815"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-19T13:06:03.336402" level="INFO">Current page contains element 'xpath://form[@class='v-form']'.</msg>
+<arg>${login_form}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-19T13:06:03.324438" elapsed="0.012968"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-19T13:06:05.337849" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-19T13:06:03.337406" elapsed="2.000443"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-19T13:06:05.338878" elapsed="2.256937"/>
+</kw>
+<status status="PASS" start="2024-01-19T13:05:40.302417" elapsed="27.294400"/>
+</test>
+<status status="PASS" start="2024-01-19T13:05:40.114413" elapsed="27.483411"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="logoutTest">logoutTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-17T20:41:53.891765" rpa="false" schemaversion="5">
+<suite id="s1" name="mustBeNotFound" source="C:\robot\AuthorizeNotFound\mustBeNotFound.robot">
+<test id="s1-t1" name="Enter Data and Check Console" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-17T20:41:54.112760" level="INFO">Opening browser 'Chrome' to base url 'https://test-orto-opr.azurewebsites.net/#/login'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-17T20:41:54.112760" elapsed="4.329428"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-17T20:42:01.442679" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-17T20:41:58.442188" elapsed="3.000491"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-17T20:42:01.443469" elapsed="0.119396"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-17T20:42:04.565094" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-17T20:42:01.563871" elapsed="3.001223"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-17T20:42:04.566793" level="INFO">Typing text 'sdfewfwef' into text field 'xpath://input[@class='v-field__input']'.</msg>
+<arg>${login_locator}</arg>
+<arg>${login_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-17T20:42:04.565783" elapsed="0.166121"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-17T20:42:04.732901" level="INFO">Typing text 'sdsfwef' into text field 'xpath://input[@placeholder='Ievadiet paroli']'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-17T20:42:04.732901" elapsed="0.121003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-17T20:42:06.855804" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-17T20:42:04.854906" elapsed="2.000898"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-17T20:42:06.857423" level="INFO">Clicking element 'class:v-btn--block'.</msg>
+<arg>${button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-17T20:42:06.856443" elapsed="0.068395"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-17T20:42:08.926443" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-17T20:42:06.925837" elapsed="2.000606"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-17T20:42:08.940500" level="INFO">Current page contains element 'xpath://div[@role='alert']'.</msg>
+<arg>${error_locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-01-17T20:42:08.927502" elapsed="0.012998"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-01-17T20:42:08.967197" level="INFO">${actual_text} = not found</msg>
+<var>${actual_text}</var>
+<arg>${error_locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-17T20:42:08.941480" elapsed="0.025717"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_text}</arg>
+<arg>${expected_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-01-17T20:42:08.967928" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-17T20:42:08.967928" elapsed="2.274522"/>
+</kw>
+<status status="PASS" start="2024-01-17T20:41:54.109767" elapsed="17.133145"/>
+</test>
+<status status="PASS" start="2024-01-17T20:41:53.893754" elapsed="17.350814"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="mustBeNotFound">mustBeNotFound</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
